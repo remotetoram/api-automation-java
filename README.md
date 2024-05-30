@@ -1,4 +1,4 @@
-# SYNOVUS API Test Automation Framework
+# API Test Automation Framework
 
 ## Overview
 
