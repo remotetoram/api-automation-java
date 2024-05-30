@@ -1,0 +1,13 @@
+{
+    "bnkNumber": "$bnkNumber",
+    "applKy": "$applKy",
+    "opID": "$opID",
+    "desc1": "$desc1",
+    "desc2": "",
+    "channel": "$channel",
+    "requestMsg": {
+        "branch": "$vacantSB_branch",
+        "boxPrefix": "$vacantSB_boxPrefix",
+        "boxType": "$vacantSB_boxType"
+    }
+}

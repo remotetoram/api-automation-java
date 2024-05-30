@@ -1,0 +1,60 @@
+ # Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+ 
+trigger:
+- main
+ 
+pool:
+  name: QA-EUS2-Agent Pool
+  #vmImage: 'windows-latest'
+
+ 
+ 
+variables:
+  testFilters: $[format('-Dcucumber.filter.tags="@regression"')]
+ 
+# schedules:
+#   - cron: "30 18 * * *"
+#     displayName: Scheduled API - Contract Test Validation Test
+#     branches:
+#       include:
+#         - main
+#     always : true
+ 
+steps:
+- script: |
+    echo "OAUTH_CLIENT_ID: $(OAUTH_CLIENT_ID)"
+    echo "OAUTH_CLIENT_SECRET: $(OAUTH_CLIENT_SECRET)"
+  displayName: 'Debugging Output'
+- task: Maven@3
+  displayName: 'MuleSoft API Regression- Contract Test Validation'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenAuthenticateFeed: true
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '17'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'test'
+    options: '$(testFilters) -DOAUTH_CLIENT_ID=$(OAUTH_CLIENT_ID) -DOAUTH_CLIENT_SECRET=$(OAUTH_CLIENT_SECRET)'
+    
+- task: CopyFiles@2
+  displayName: 'Copying cucumber reports'
+  timeoutInMinutes: 300
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    contents: '**/test-reports*/**'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+  condition: always()
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publishing extent reports'
+  timeoutInMinutes: 300
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: ExtentReports
+  condition: always()

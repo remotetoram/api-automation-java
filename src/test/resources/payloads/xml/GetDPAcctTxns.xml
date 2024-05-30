@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:get="http://services.soa.synovus.com/schemas/GetDPAcctTxns">
+	<soapenv:Header />
+	<soapenv:Body>
+		<get:GetAcctTxnReq>
+			<get:MsgID>5c528830-3efb-44e1-b3d1-949fd70e2d37</get:MsgID>
+			<get:AcctNbr>4520000111</get:AcctNbr>
+			<get:BnkNumber>460</get:BnkNumber>
+			<get:ApplKy>7398E786-A49A-4FF5-A579-C52D67711137</get:ApplKy>
+			<get:SumRetrieveInd>Y</get:SumRetrieveInd>
+			<get:IntraRetrieveInd>Y</get:IntraRetrieveInd>
+			<get:NonIntraRetrieveInd>Y</get:NonIntraRetrieveInd>
+			<get:Channel>1</get:Channel>
+		</get:GetAcctTxnReq>
+	</soapenv:Body>
+</soapenv:Envelope>

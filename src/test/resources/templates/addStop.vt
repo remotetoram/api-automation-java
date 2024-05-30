@@ -1,0 +1,23 @@
+{
+    "bnkNumber": "$bnkNumber",
+    "applKy": "$applKy",
+    "opID": "$opID",
+    "desc1": "$desc1",
+    "channel": "$channel",
+    "requestMsg": {
+        "dpAcctNbr": "$dpAcctNbr",
+        "dpStpPmtTyp": "$dpStpPmtTyp",
+        "dpStpPmtAmt": "$dpStpPmtAmt",
+        "dpStpPmtSrlNbr": "$dpStpPmtSrlNbr",
+        "dpStpPmtEndingSrlNbr": "$dpStpPmtEndingSrlNbr",
+        "dpStpPmtExpireDte": "$dpStpPmtExpireDte",
+        "dpStpPmtWaiveServChrgInd": "$dpStpPmtWaiveServChrgInd",
+        "dpStpPmtConfirmationInd": "$dpStpPmtConfirmationInd",
+        "dpStpPmtCompID": "$dpStpPmtCompID",
+        "dpStpPmtEntClsCde": "$dpStpPmtEntClsCde",
+        "dpStpPmtIndivID": "$dpStpPmtIndivID",
+        "dpStpPayCkIssDte": "$dpStpPayCkIssDte",
+        "dpStpPmtResn": "$dpStpPmtResn",
+        "dpStpPmtPye": "$dpStpPmtPye"
+    }
+}

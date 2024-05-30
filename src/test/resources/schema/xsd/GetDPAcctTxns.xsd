@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema xmlns:tns="http://services.soa.synovus.com/schemas/GetDPAcctTxns" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://services.soa.synovus.com/schemas/GetDPAcctTxns" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetAcctTxnRes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MsgID" type="xs:string" />
+        <xs:element name="AcctTxnData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AcctNbr" type="xs:unsignedLong" />
+              <xs:element name="IntraNbrRows" type="xs:unsignedByte" />
+              <xs:element name="IntraMoreInd" type="xs:string" />
+              <xs:element name="IntraRepTxnIndex" type="xs:unsignedByte" />
+              <xs:element name="NonIntraNbrRows" type="xs:unsignedByte" />
+              <xs:element name="MoreTranInd" type="xs:string" />
+              <xs:element name="NonIntraRunBalAmt" type="xs:unsignedInt" />
+              <xs:element name="NonIntraTxnInde" type="xs:unsignedByte" />
+              <xs:element name="AcctName" type="xs:string" />
+              <xs:element name="TotalCrLastPost" type="xs:decimal" />
+              <xs:element name="TotalDrLastPost" type="xs:decimal" />
+              <xs:element name="LastFloatEOD" type="xs:decimal" />
+              <xs:element name="DPOpenDate" type="xs:date" />
+              <xs:element name="DPCloseDate" type="xs:string" />
+              <xs:element name="PrimOff" type="xs:unsignedByte" />
+              <xs:element name="SecOff" type="xs:unsignedByte" />
+              <xs:element name="AcctType" type="xs:unsignedByte" />
+              <xs:element name="cctTIN" type="xs:unsignedInt" />
+              <xs:element name="LastCustActivityDate" type="xs:date" />
+              <xs:element name="LastStatementDate" type="xs:date" />
+              <xs:element name="NextStatementDate" type="xs:date" />
+              <xs:element name="LastDPDate" type="xs:date" />
+              <xs:element name="LastDPAmt" type="xs:decimal" />
+              <xs:element name="NbrofDrCTD" type="xs:unsignedByte" />
+              <xs:element name="NbrofCrCTD" type="xs:unsignedByte" />
+              <xs:element name="OneDayFloatAmt" type="xs:unsignedByte" />
+              <xs:element name="TwoDayFloatAmt" type="xs:unsignedByte" />
+              <xs:element name="ThreeDayFloatAmt" type="xs:unsignedByte" />
+              <xs:element name="Float4thru9CollectAmt" type="xs:unsignedByte" />
+              <xs:element name="PastYrAvgCHFloat" type="xs:unsignedByte" />
+              <xs:element name="InterestPdLastYrYTD" type="xs:decimal" />
+              <xs:element name="AmtofDrCTD" type="xs:decimal" />
+              <xs:element name="AvgCkFloatCTD" type="xs:unsignedByte" />
+              <xs:element name="AmtofCrCTD" type="xs:decimal" />
+              <xs:element name="AvgCkFloatYTD" type="xs:unsignedByte" />
+              <xs:element name="AssignedIntRate" type="xs:decimal" />
+              <xs:element name="CurIntEffectDate" type="xs:date" />
+              <xs:element name="DPYield" type="xs:decimal" />
+              <xs:element name="AccruedIntCTD" type="xs:decimal" />
+              <xs:element name="PriorCycleAccruAdj" type="xs:decimal" />
+              <xs:element name="InterestPdYTD" type="xs:decimal" />
+              <xs:element name="HoldInd" type="xs:string" />
+              <xs:element name="NbrTimesODYTD" type="xs:unsignedByte" />
+              <xs:element name="NbrReturnYTD" type="xs:unsignedByte" />
+              <xs:element name="EmpAcctInd" type="xs:string" />
+              <xs:element name="NameAdd1" type="xs:string" />
+              <xs:element name="NameAdd2" type="xs:string" />
+              <xs:element name="NameAdd3" type="xs:string" />
+              <xs:element name="CurrentBal" type="xs:decimal" />
+              <xs:element name="TotalAccessBal" type="xs:decimal" />
+              <xs:element name="RelateAvailBal" type="xs:decimal" />
+              <xs:element name="LedgerBal" type="xs:decimal" />
+              <xs:element name="CurrentCollectedBal" type="xs:decimal" />
+              <xs:element name="CollectBal" type="xs:decimal" />
+              <xs:element name="ESPScoreAmt" type="xs:unsignedShort" />
+              <xs:element name="TellerAuthBal" type="xs:decimal" />
+              <xs:element name="ClosingBal" type="xs:decimal" />
+              <xs:element name="AvgBalYTD" type="xs:unsignedInt" />
+              <xs:element name="AvgLedBalCTD" type="xs:unsignedInt" />
+              <xs:element name="AvgCollectBalCTD" type="xs:unsignedInt" />
+              <xs:element name="PercentLedBalCollectCTD" type="xs:decimal" />
+              <xs:element name="AvgCollectBalYTD" type="xs:unsignedInt" />
+              <xs:element name="PercentLedBalCollectYTD" type="xs:decimal" />
+              <xs:element name="TotalFloatBal" type="xs:unsignedByte" />
+              <xs:element name="LastStatementBal" type="xs:decimal" />
+              <xs:element name="TDCurBal" type="xs:decimal" />
+              <xs:element name="TDOrigDP" type="xs:decimal" />
+              <xs:element name="TDCurIntRate" type="xs:decimal" />
+              <xs:element name="TDYield" type="xs:decimal" />
+              <xs:element name="TDAvailInt" type="xs:decimal" />
+              <xs:element name="TDAccrueIntCTD" type="xs:decimal" />
+              <xs:element name="TDProjectIntEarned" type="xs:decimal" />
+              <xs:element name="TDPenaltyAmt" type="xs:decimal" />
+              <xs:element name="TDPrincBal" type="xs:decimal" />
+              <xs:element name="TDLastIntPd" type="xs:decimal" />
+              <xs:element name="TDOrigRate" type="xs:decimal" />
+              <xs:element name="IntRateAdj" type="xs:decimal" />
+              <xs:element name="IntRateAdjExpDate" type="xs:string" />
+              <xs:element name="TDTeaseRateAdj" type="xs:decimal" />
+              <xs:element name="AcctAvailBal" type="xs:decimal" />
+              <xs:element name="AcctAvailBalLabel" type="xs:string" />
+              <xs:element name="TotalAccessBalLabel" type="xs:string" />
+              <xs:element name="GetAcctTxnIntraLst" />
+              <xs:element name="GetAcctTxnNonIntraLst">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="GetAcctTxnNonIntraData">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="RunBalAmt" type="xs:decimal" />
+                          <xs:element name="NonIntraSrchBeginDate" type="xs:date" />
+                          <xs:element name="NonIntraSrchTxnCode" type="xs:unsignedShort" />
+                          <xs:element name="TxnCodeDesc" type="xs:string" />
+                          <xs:element name="TxnSourceID2" type="xs:string" />
+                          <xs:element name="TxnCtrl" type="xs:unsignedLong" />
+                          <xs:element name="NonIntraSrchAmt" type="xs:decimal" />
+                          <xs:element name="NonIntraSrchCkNbr" type="xs:unsignedByte" />
+                          <xs:element name="TxnEffectDate2" type="xs:date" />
+                          <xs:element name="OrigTranCode2" type="xs:unsignedByte" />
+                          <xs:element name="ExtTxnName2" type="xs:string" />
+                          <xs:element name="ReverseInd" type="xs:string" />
+                          <xs:element name="TxnTypeInd" type="xs:string" />
+                          <xs:element name="ImageCode" type="xs:string" />
+                          <xs:element name="HSACode2" type="xs:unsignedByte" />
+                          <xs:element name="TxnDesc1" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ResponseCode" type="xs:unsignedByte" />
+        <xs:element name="ResponseMsg" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

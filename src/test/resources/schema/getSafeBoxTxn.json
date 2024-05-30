@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "boxTransactionsData": {
+            "type": "object",
+            "properties": {
+                "brnch": {
+                    "type": "integer"
+                },
+                "boxPrfx": {
+                    "type": "string"
+                },
+                "boxNbr": {
+                    "type": "string"
+                },
+                "tranCnt": {
+                    "type": "integer"
+                },
+                "morePages": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                }
+            },
+            "required": ["brnch", "boxPrfx", "boxNbr", "tranCnt", "morePages"]
+        },
+        "boxTransactionsList": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "txnDte": {
+                        "type": "string",
+                        "format": "date"
+                    },
+                    "txnCde": {
+                        "type": "string"
+                    },
+                    "txnAmt": {
+                        "type": "number"
+                    }
+                },
+                "required": ["txnDte", "txnCde", "txnAmt"]
+            }
+        },
+        "transactionID": {
+            "type": "string",
+            "format": "uuid"
+        }
+    },
+    "required": ["boxTransactionsData", "boxTransactionsList", "transactionID"]
+}

@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "boxOwnerData": {
+      "type": "object",
+      "properties": {
+        "brnch": {
+          "type": "integer"
+        },
+        "boxPrfx": {
+          "type": "string"
+        },
+        "boxNbr": {
+          "type": "string"
+        },
+        "boxTyp": {
+          "type": "integer"
+        },
+        "boxGrp": {
+          "type": "integer"
+        },
+        "boxDesc": {
+          "type": "string"
+        },
+        "nmeAddr1": {
+          "type": "string"
+        },
+        "nmeAddr2": {
+          "type": "string"
+        },
+        "nmeAddr3": {
+          "type": "string"
+        },
+        "nmeAddr4": {
+          "type": "string"
+        },
+        "nmeAddr5": {
+          "type": "string"
+        },
+        "statCde": {
+          "type": "string"
+        },
+        "rentDte": {
+          "type": "string"
+        },
+        "lockChangedDteNew": {
+          "type": "string"
+        },
+        "lostKeyInd": {
+          "type": "string"
+        },
+        "keyDPAmt": {
+          "type": "integer"
+        },
+        "shrtNme": {
+          "type": "string"
+        },
+        "boxComment1": {
+          "type": "string"
+        },
+        "boxComment2": {
+          "type": "string"
+        },
+        "ownComment1": {
+          "type": "string"
+        },
+        "ownComment2": {
+          "type": "string"
+        },
+        "hmPh": {
+          "type": "string"
+        },
+        "busPh": {
+          "type": "string"
+        },
+        "taxId": {
+          "type": "string"
+        },
+        "prmyOffcr": {
+          "type": "integer"
+        },
+        "cstCntr": {
+          "type": "integer"
+        },
+        "curTerm": {
+          "type": "integer"
+        },
+        "rnwTerm": {
+          "type": "integer"
+        },
+        "expDte": {
+          "type": "string"
+        },
+        "curBillCde": {
+          "type": "string"
+        },
+        "rnwBillCde": {
+          "type": "string"
+        },
+        "curRteCde": {
+          "type": "string"
+        },
+        "curDiscPremInd": {
+          "type": "string"
+        },
+        "rnwRteCde": {
+          "type": "string"
+        },
+        "rnwDiscPremInd": {
+          "type": "string"
+        },
+        "rnwRte": {
+          "type": "number"
+        },
+        "curRte": {
+          "type": "number"
+        },
+        "stdRte": {
+          "type": "number"
+        },
+        "curBal": {
+          "type": "string"
+        },
+        "billableAcct": {
+          "type": "integer"
+        },
+        "lstAccDte": {
+          "type": "string"
+        },
+        "lstMaintDte": {
+          "type": "string"
+        },
+        "deputy1ShrtNme": {
+          "type": "string"
+        },
+        "deputy2ShrtNme": {
+          "type": "string"
+        },
+        "cautionCde1": {
+          "type": "integer"
+        },
+        "cautionDesc1": {
+          "type": "string"
+        },
+        "cautionCde2": {
+          "type": "integer"
+        },
+        "cautionDesc2": {
+          "type": "string"
+        },
+        "cautionCde3": {
+          "type": "integer"
+        },
+        "cautionDesc3": {
+          "type": "string"
+        },
+        "expDteCCYYMMDD": {
+          "type": "string"
+        },
+        "lstMaintDteCCYYMMDD": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "brnch",
+        "boxPrfx",
+        "boxNbr",
+        "boxTyp",
+        "boxGrp"]
+
+    },
+    "transactionID": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "boxOwnerData",
+    "transactionID"
+  ]
+}

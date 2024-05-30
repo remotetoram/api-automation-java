@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "transactionID": {
+      "type": "string",
+      "pattern": "^[A-F0-9]{8}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{12}$"
+    },
+    "controlData": {
+      "type": "object",
+      "properties": {
+        "dpAcctNbr": { "type": "integer" },
+        "dpAcctNme": { "type": "string" },
+        "dpStpPayCnt": { "type": "integer" },
+        "nbrStops": { "type": "integer" },
+        "morePages": { "type": "string", "enum": ["Y", "N"] }
+      },
+      "required": ["dpAcctNbr", "dpAcctNme", "dpStpPayCnt", "nbrStops", "morePages"]
+    },
+    "stopPaymentsLst": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dpStpPmtId": { "type": "integer" },
+          "dpStpPmtTyp": { "type": "integer" },
+          "dpStpPmtAmt": { "type": "integer" },
+          "dpStpPmtSrlNbr": { "type": "integer" },
+          "dpStpPmtEndingSrlNbr": { "type": "integer" },
+          "dpStpPmtResn": { "type": "string" },
+          "dpStpPmtPye": { "type": "string" },
+          "dpStpPmtExpireDte": { "type": "string", "format": "date" },
+          "dpStpPmtConfirmationInd": { "type": "string", "enum": ["V", "W"] },
+          "dpDelStpPayInd": { "type": "string", "enum": ["Y", "N"] },
+          "dpStpPayEntdDte": { "type": "string", "format": "date" },
+          "dpStpPayCkIssDte": { "type": "string", "format": "date" }
+        },
+        "required": ["dpStpPmtId", "dpStpPmtTyp", "dpStpPmtAmt", "dpStpPmtSrlNbr", "dpStpPmtEndingSrlNbr", "dpStpPmtExpireDte", "dpStpPmtConfirmationInd", "dpDelStpPayInd", "dpStpPayEntdDte", "dpStpPayCkIssDte"]
+      }
+    }
+  },
+  "required": ["transactionID", "controlData", "stopPaymentsLst"]
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "boxDeputies": {
+      "type": "object",
+      "properties": {
+        "brnch": {
+          "type": "integer"
+        },
+        "boxPrfx": {
+          "type": "string"
+        },
+        "boxNbr": {
+          "type": "string"
+        },
+        "deputy1NmeAddr1": {
+          "type": "string"
+        },
+        "deputy1NmeAddr2": {
+          "type": "string"
+        },
+        "deputy1NmeAddr3": {
+          "type": "string"
+        },
+        "deputy1NmeAddr4": {
+          "type": "string"
+        },
+        "deputy1NmeAddr5": {
+          "type": "string"
+        },
+        "deputy1ShrtNme": {
+          "type": "string"
+        },
+        "deputy1HmPhNbr": {
+          "type": "string"
+        },
+        "deputy1BusPhNbr": {
+          "type": "string"
+        },
+        "deputy1TaxId": {
+          "type": "string"
+        },
+        "deputy1TaxNbr": {
+          "type": "string"
+        },
+        "deputy2NmeAddr1": {
+          "type": "string"
+        },
+        "deputy2NmeAddr2": {
+          "type": "string"
+        },
+        "deputy2NmeAddr3": {
+          "type": "string"
+        },
+        "deputy2ShrtNme": {
+          "type": "string"
+        },
+        "deputy2HmPhNbr": {
+          "type": "string"
+        },
+        "deputy2BusPhNbr": {
+          "type": "string"
+        },
+        "deputy2TaxId": {
+          "type": "string"
+        },
+        "deputy2TaxNbr": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "brnch",
+        "boxPrfx",
+        "boxNbr"
+        ]
+    },
+    "transactionID": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "boxDeputies",
+    "transactionID"
+  ]
+}

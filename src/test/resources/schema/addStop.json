@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "transactionID": {
+      "type": "string"
+    },
+    "stopPayments": {
+      "type": "object",
+      "properties": {
+        "dpAcctNbr": {
+          "type": "integer"
+        },
+        "dpAcctNme": {
+          "type": "string"
+        },
+        "dpStpPayCkIssDte": {
+          "type": "string"
+        },
+        "dpStpPmtId": {
+          "type": "integer"
+        },
+        "dpStpPmtTyp": {
+          "type": "integer"
+        },
+        "dpStpPmtAmt": {
+          "type": "integer"
+        },
+        "dpStpPmtSrlNbr": {
+          "type": "integer"
+        },
+        "dpStpPmtEndingSrlNbr": {
+          "type": "integer"
+        },
+        "dpStpPmtResn": {
+          "type": "string"
+        },
+        "dpStpPmtPye": {
+          "type": "string"
+        },
+        "dpStpPmtExpireDte": {
+          "type": "string"
+        },
+        "dpStpPmtConfirmationInd": {
+          "type": "string"
+        },
+        "dpTxnMsg": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "dpAcctNbr",
+        "dpAcctNme",
+        "dpStpPayCkIssDte",
+        "dpStpPmtId",
+        "dpStpPmtTyp",
+        "dpStpPmtAmt",
+        "dpStpPmtSrlNbr",
+        "dpStpPmtEndingSrlNbr",
+        "dpStpPmtResn",
+        "dpStpPmtPye",
+        "dpStpPmtExpireDte",
+        "dpStpPmtConfirmationInd",
+        "dpTxnMsg"
+      ]
+    }
+  },
+  "required": [
+    "transactionID",
+    "stopPayments"
+  ]
+}

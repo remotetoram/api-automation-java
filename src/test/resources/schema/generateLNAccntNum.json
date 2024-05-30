@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "transactionID": {
+      "type": "string"
+    },
+    "accountNumber": {
+      "type": "object",
+      "properties": {
+        "branch": {
+          "type": "integer"
+        },
+        "acctType": {
+          "type": "integer"
+        },
+        "acctNbr": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "branch",
+        "acctType",
+        "acctNbr"
+      ]
+    }
+  },
+  "required": [
+    "transactionID",
+    "accountNumber"
+  ]
+}

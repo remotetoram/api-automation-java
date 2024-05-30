@@ -1,0 +1,92 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "transactionID": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "account": {
+            "type": "object",
+            "properties": {
+                "lnTxnCde": {
+                    "type": "integer"
+                },
+                "lnAcctNbr": {
+                    "type": "integer"
+                },
+                "lnAcctNme": {
+                    "type": "string"
+                },
+                "lnCstCntr": {
+                    "type": "integer"
+                },
+                "lnAcctTyp": {
+                    "type": "integer"
+                },
+                "lnBrnchNbr": {
+                    "type": "integer"
+                },
+                "lnPrmyOffcr": {
+                    "type": "integer"
+                },
+                "lnScndyOffcr": {
+                    "type": "integer"
+                },
+                "lnnaicsCde": {
+                    "type": "integer"
+                },
+                "lnTaxIdCde": {
+                    "type": "string",
+                    "maxLength": 1
+                },
+                "lnTaxNbrFrmtAsSsn": {
+                    "type": "string",
+                    "pattern": "^\\d{11}$"
+                },
+                "lnDtlBillInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnOrgTyp": {
+                    "type": "string",
+                    "pattern": "^[A-Z]{2}$"
+                },
+                "lnPrpseCde": {
+                    "type": "string",
+                    "pattern": "^[A-Z]$"
+                },
+                "lnGuarEndrsmtInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnProfAnlysInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnCombStmtInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnAcctBillInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnarCustExtnInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnFlrPlnInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                },
+                "lnangInd": {
+                    "type": "string",
+                    "enum": ["Y", "N"]
+                }
+            },
+            "required": ["lnTxnCde", "lnAcctNbr", "lnAcctNme", "lnCstCntr", "lnAcctTyp", "lnBrnchNbr", "lnPrmyOffcr", "lnScndyOffcr", "lnnaicsCde", "lnTaxIdCde", "lnTaxNbrFrmtAsSsn", "lnDtlBillInd", "lnOrgTyp", "lnPrpseCde", "lnGuarEndrsmtInd", "lnProfAnlysInd", "lnCombStmtInd", "lnAcctBillInd", "lnarCustExtnInd", "lnFlrPlnInd", "lnangInd"]
+        }
+    },
+    "required": ["transactionID", "account"]
+}

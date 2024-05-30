@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "transactionID": {
+      "type": "string"
+    },
+    "stopPayments": {
+      "type": "object",
+      "properties": {
+        "dpAcctNbr": {
+          "type": "integer"
+        },
+        "dpAcctNme": {
+          "type": "string"
+        },
+        "dpStpPmtId": {
+          "type": "integer"
+        },
+        "dpStpPmtSrlNbr": {
+          "type": "integer"
+        },
+        "dpStpPmtAmt": {
+          "type": "integer"
+        },
+        "dpStpPmtPye": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "dpAcctNbr",
+        "dpAcctNme",
+        "dpStpPmtId",
+        "dpStpPmtSrlNbr",
+        "dpStpPmtAmt",
+        "dpStpPmtPye"
+      ]
+    }
+  },
+  "required": [
+    "transactionID",
+    "stopPayments"
+  ]
+}

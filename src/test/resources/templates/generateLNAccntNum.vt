@@ -1,0 +1,14 @@
+{
+  "bnkNumber": "$bnkNumber",
+  "applKy": "$applKy",
+  "opID": "$opID",
+  "desc1": "$desc1",
+  "desc2": "",
+  "channel": "$channel",
+  "requestMsg": {
+    "accountNumber": {
+      "branch": "$accountNumber_branch",
+      "acctType": "$accountNumber_acctType"
+    }
+  }
+}

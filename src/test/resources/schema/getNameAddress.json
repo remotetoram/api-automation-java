@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "queryparametersAccountNameAddressInq": {
+      "type": "object",
+      "properties": {
+        "appCde": {
+          "type": "string"
+        },
+        "applNbr": {
+          "type": "string"
+        }
+      },
+      "required": ["appCde", "applNbr"]
+    },
+    "accountNameAddressInqDataLst": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nmeAddrLneCde1": {
+            "type": "string"
+          },
+          "nmeAddrLneCde2": {
+            "type": "string"
+          },
+          "nmeAddrLneCde3": {
+            "type": "string"
+          },
+          "nmeAddrLne1": {
+            "type": "string"
+          },
+          "nmeAddrLne2": {
+            "type": "string"
+          },
+          "nmeAddrLne3": {
+            "type": "string"
+          },
+          "prmyHmPhNbr": {
+            "type": "string"
+          },
+          "scndyPhNbr": {
+            "type": "string"
+          },
+          "nmeAddrEffDte": {
+            "type": "string",
+            "format": "date"
+          },
+          "ciAcctCurRecTypCde": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "nmeAddrLneCde1",
+          "nmeAddrLneCde2",
+          "nmeAddrLneCde3",
+          "nmeAddrLne1",
+          "nmeAddrLne2",
+          "nmeAddrLne3",
+          "prmyHmPhNbr",
+          "scndyPhNbr",
+          "nmeAddrEffDte",
+          "ciAcctCurRecTypCde"
+        ]
+      }
+    },
+    "transactionID": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": ["queryparametersAccountNameAddressInq", "accountNameAddressInqDataLst", "transactionID"]
+}

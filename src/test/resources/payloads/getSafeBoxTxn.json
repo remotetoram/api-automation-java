@@ -1,0 +1,13 @@
+{
+"bnkNumber": "460",
+"applKy": "98FEC6FD-7BFE-4151-95D3-2BBEC0FCBB06",
+"opID": "84478",
+"desc1": "EID",
+"desc2": "",
+"channel": "1",
+"requestMsg":{
+	"branch": "1",
+	"boxPrefix": "100",
+	"boxNumber": "635"
+}
+}

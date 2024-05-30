@@ -1,0 +1,11 @@
+{
+    "bnkNumber": "$bnkNumber",
+    "applKy": "$applKy",
+    "opID": "$opID",
+    "desc1": "$desc1",
+    "channel": "$channel",
+    "requestMsg": {
+        "dpAcctNbr": "$dpAcctNbr",
+        "srchTyp": "$srchTyp"
+      }
+}

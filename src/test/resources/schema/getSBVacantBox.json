@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SafeDepositBoxes",
+  "type": "object",
+  "properties": {
+    "queryParametersVacantBoxes": {
+      "type": "object",
+      "properties": {
+        "tranCnt": { "type": "integer" },
+        "morePages": { "type": "string" }
+      },
+      "required": ["tranCnt", "morePages"]
+    },
+    "vacantBoxesLst": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "safeBoxPrfx": { "type": "string" },
+          "safeBoxNbr": { "type": "string" },
+          "safeBoxTyp": { "type": "integer" },
+          "safeBoxTypDesc": { "type": "string" },
+          "safeBoxTypRte": { "type": "string" }
+        },
+        "required": ["safeBoxPrfx", "safeBoxNbr", "safeBoxTyp", "safeBoxTypDesc", "safeBoxTypRte"]
+      }
+    },
+    "transactionID": { "type": "string" }
+  },
+  "required": ["queryParametersVacantBoxes", "vacantBoxesLst", "transactionID"]
+}
